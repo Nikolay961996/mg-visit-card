@@ -32,12 +32,15 @@ body {
 
 .hero-with-bg {
     min-height: 100vh;
-    background:
-            linear-gradient(
-                    rgba(64, 64, 64, 0.9),
-                    rgba(64, 64, 64, 0.6)
-            ),
-            url('../assets/images/hero/background.jpg');
+
+    background: black;
+    /*background:*/
+    /*        linear-gradient(*/
+    /*                rgba(64, 64, 64, 0.9),*/
+    /*                rgba(64, 64, 64, 0.6)*/
+    /*        ),*/
+    /*        url('../assets/images/hero/background.jpg');*/
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
