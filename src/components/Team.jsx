@@ -11,7 +11,7 @@ const Team = () => {
             name: "Иванова Екатерина",
             role: "Team Lead / Developer",
             experience: "4+ лет опыта",
-            skills: ["MBI", "Анализ", "Сотрудничество", "Бизнес-идеи", "C#", "React", "Angular"],
+            skills: ["MBI", "Анализ", "Сотрудничество", "Бизнес-идеи", "C#", "React", "Angular", "Python", "C"],
             achievements: "Эксперт в сфере выявлений и решений проблем заказчиков",
             previous: "Myrtex, MBI, Мама-предприниматель, Акселератор"
         },
@@ -20,7 +20,7 @@ const Team = () => {
             name: "Иванов Николай",
             role: "Tech Lead / Senior FullStack Developer",
             experience: "8+ лет опыта",
-            skills: ["C#", "Microservices", "Architecture", "Highload", "Databases", "React", "Angular"],
+            skills: ["C#", "GO", "Python", "C", "Microservices", "Architecture", "Highload", "Databases", "React", "Angular"],
             achievements: "Ведущий разработчик в большинстве проектов, эксперт в сложных системах",
             previous: "Ozon Tech, Alfa Bank, Myrtex"
         },

@@ -62,7 +62,7 @@ const Services = () => {
 
                 <div style={{ textAlign: 'center' }}>
                     <p style={{ marginBottom: '2rem', fontSize: '1.1rem' }}>
-                        Цены обсуждаются индивидуально. Кратко опишите свою проблему:
+                        Цены обсуждаются индивидуально. Кратко опишите свою проблему
                     </p>
 
                     <form onSubmit={handleSubmit} className="contact-form">
