@@ -24,14 +24,15 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to server
-        uses: appleboy/scp-action@v0.1.3
+      - name: Deploy with rsync
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "dist/*"
-          target: ${{ secrets.TARGET_DIR }}
+          switches: -avzr --delete
+          path: dist/
+          remote_path: ${{ secrets.TARGET_DIR }}
+          remote_host: ${{ secrets.HOST }}
+          remote_user: ${{ secrets.USERNAME }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Fix permissions on server
         uses: appleboy/ssh-action@v1.0.3
