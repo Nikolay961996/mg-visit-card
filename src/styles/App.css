@@ -89,11 +89,21 @@ body {
 
 .bg-field-grid {
     position: absolute;
-    inset: 0;
+    top: -34px;
+    left: -34px;
+    right: 0;
+    bottom: 0;
     background-image: radial-gradient(rgba(148, 163, 184, 0.09) 1px, transparent 1px);
     background-size: 34px 34px;
     mask-image: radial-gradient(75% 65% at 50% 40%, black 0%, transparent 100%);
     -webkit-mask-image: radial-gradient(75% 65% at 50% 40%, black 0%, transparent 100%);
+    animation: grid-drift 11s linear infinite;
+}
+
+/* ползём ровно на один тайл сетки — шов незаметен */
+@keyframes grid-drift {
+    from { background-position: 0 0; }
+    to { background-position: 34px 34px; }
 }
 
 /* ---------- Header ---------- */
@@ -974,6 +984,10 @@ body {
     }
 
     .scroll-hint-line {
+        animation: none;
+    }
+
+    .bg-field-grid {
         animation: none;
     }
 
