@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16T19:32:22Z",
+  "generatedAt": "2026-09-16T20:01:37Z",
   "title": "Design System: MadGeeks",
   "extensions": {
     "colorMeta": {
@@ -134,9 +134,18 @@
       "name": "Case Card",
       "kind": "card",
       "refersTo": "card",
-      "description": "Карточка кейса: панель в 1px-рамке, медиа в покое приглушено (saturate 0.85), hover — акцентная рамка, подъём 4px, зум фото и полная насыщенность.",
+      "description": "Карточка кейса: панель в 1px-рамке, медиа — авторская SVG-пиктограмма (тёмная панель, точечная сетка, линии 2px в #4D6BFE/#6D86FF); hover — акцентная рамка, подъём 4px, зум медиа scale(1.05).",
       "html": "<article class=\"ds-case-card\"><div class=\"ds-case-media\"></div><div class=\"ds-case-body\"><span class=\"ds-case-tag\">highload</span><h3>Система контроля топлива порта</h3><p>Мониторинг расхода топлива в реальном времени.</p></div></article>",
-      "css": ".ds-case-card { border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 14px; overflow: hidden; background: #0a1020; transition: border-color 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; max-width: 420px; } .ds-case-card:hover { border-color: rgba(109, 134, 255, 0.5); transform: translateY(-4px); } .ds-case-media { height: 180px; background: linear-gradient(135deg, #1c2740, #0b1122); } .ds-case-body { padding: 1.5rem 1.6rem 1.75rem; display: flex; flex-direction: column; gap: 0.5rem; } .ds-case-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #6d86ff; letter-spacing: 0.02em; } .ds-case-body h3 { margin: 0; font-family: 'Manrope', sans-serif; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.3; color: #e7ecf5; } .ds-case-body p { margin: 0; color: #9aa7bd; font-size: 0.95rem; font-family: 'Manrope', sans-serif; line-height: 1.6; }"
+      "css": ".ds-case-card { border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 14px; overflow: hidden; background: #0a1020; transition: border-color 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; width: 100%; max-width: 420px; } .ds-case-card:hover { border-color: rgba(109, 134, 255, 0.5); transform: translateY(-4px); } .ds-case-media { height: 180px; overflow: hidden; background: linear-gradient(180deg, #0C1428, #090F1E); } .ds-case-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; } .ds-case-card:hover .ds-case-media img { transform: scale(1.05); } .ds-case-body { padding: 1.5rem 1.6rem 1.75rem; display: flex; flex-direction: column; gap: 0.5rem; flex-grow: 1; } .ds-case-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #6d86ff; letter-spacing: 0.02em; } .ds-case-body h3 { margin: 0; font-family: 'Manrope', sans-serif; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.3; color: #e7ecf5; } .ds-case-body p { margin: 0; color: #9aa7bd; font-size: 0.95rem; font-family: 'Manrope', sans-serif; line-height: 1.6; }",
+      "note": "В продакшен-CSS на .case-media img формально остался filter: saturate(0.85) → saturate(1) — наследие растровой эпохи; к плоским SVG-пиктограммам из акцентной палитры он визуально инертен. Копировать как есть, не удалять."
+    },
+    {
+      "name": "Case Card Link",
+      "kind": "card",
+      "refersTo": "card-link",
+      "description": "Вариант карточки кейса со ссылкой: вся карточка — <a> на реальный сайт (target=_blank), у тега — стрелка ArrowUpRight. Обёртка .case-card-wrap (display:flex) даёт равную высоту в ряду.",
+      "html": "<a class=\"ds-case-card ds-case-card-link\" href=\"https://example.ru\" target=\"_blank\" rel=\"noreferrer\"><div class=\"ds-case-media\"></div><div class=\"ds-case-body\"><span class=\"ds-case-tag\">веб / портфолио<svg class=\"ds-case-arrow\" width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7\"/><path d=\"M8 7h9v9\"/></svg></span><h3>Сайт-портфолио для художницы</h3><p>Авторский сайт с портфолио работ, выполненный на заказ.</p></div></a>",
+      "css": ".ds-case-card { border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 14px; overflow: hidden; background: #0a1020; transition: border-color 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; width: 100%; max-width: 420px; } .ds-case-card-link { text-decoration: none; color: inherit; } .ds-case-card:hover { border-color: rgba(109, 134, 255, 0.5); transform: translateY(-4px); } .ds-case-media { height: 180px; overflow: hidden; background: linear-gradient(180deg, #0C1428, #090F1E); } .ds-case-body { padding: 1.5rem 1.6rem 1.75rem; display: flex; flex-direction: column; gap: 0.5rem; flex-grow: 1; } .ds-case-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #6d86ff; letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 4px; } .ds-case-body h3 { margin: 0; font-family: 'Manrope', sans-serif; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.3; color: #e7ecf5; } .ds-case-body p { margin: 0; color: #9aa7bd; font-size: 0.95rem; font-family: 'Manrope', sans-serif; line-height: 1.6; } .ds-case-card:focus-visible { outline: 2px solid #6d86ff; outline-offset: 3px; }"
     },
     {
       "name": "Contact Row",
@@ -157,14 +166,14 @@
   ],
   "narrative": {
     "northStar": "Живой инженерный терминал",
-    "overview": "Это тёмная инженерная витрина, а не светлая карточная лендинг-страница. Сложная разработка показана как спокойная, точная работа машины: глубокий индиго-чёрный фон, над которым дрейфует «дышащее» световое поле из мягких орбов и тонкой точечной сетки. Поверх поля — печатающийся заголовок с мигающим курсором: сайт «печатает» то, что команда делает. Настроение заимствовано у deepseek.com/platform, но визуальный язык собственный.\n\nПлотность средняя, ритм — широкие секции (120px вертикальных отступов) с редкими карточками в тонких 1px-рамках. Материал — матовая тёмная панель, глубина достигается не тенями, а слоением фоновых тонов и свечением только у акцента. Изображения — только реальные ассеты владельцев: иллюстрации собственных кейсов и фотографии команды; стоковая графика запрещена.\n\nИнтерфейс сдержанно отзывчивый: состояния наведения — сдвиги на 4–6px, смена рамки на акцентную, растворение blur при появлении блоков. Никаких резких движений и декоративных эффектов ради эффекта — каждое движение либо несёт смысл (привлекает взгляд к CTA), либо повторяет механику терминала.",
+    "overview": "Это тёмная инженерная витрина, а не светлая карточная лендинг-страница. Сложная разработка показана как спокойная, точная работа машины: глубокий индиго-чёрный фон, над которым дрейфует «дышащее» световое поле из мягких орбов и тонкой точечной сетки. Поверх поля — печатающийся заголовок с мигающим курсором: сайт «печатает» то, что команда делает. Настроение заимствовано у deepseek.com/platform, но визуальный язык собственный.\n\nПлотность средняя, ритм — широкие секции (120px вертикальных отступов) с редкими карточками в тонких 1px-рамках. Материал — матовая тёмная панель, глубина достигается не тенями, а слоением фоновых тонов и свечением только у акцента. Изображения — только ассеты владельцев: авторские SVG-пиктограммы для каждого кейса (нарисованы специально для сайта в языке мира) и реальные фотографии команды; стоковая графика и генеративные изображения запрещены.\n\nИнтерфейс сдержанно отзывчивый: состояния наведения — сдвиги на 4–6px, смена рамки на акцентную, растворение blur при появлении блоков. Никаких резких движений и декоративных эффектов ради эффекта — каждое движение либо несёт смысл (привлекает взгляд к CTA), либо повторяет механику терминала.",
     "keyCharacteristics": [
       "Глубокий тёмный индиго-чёрный фон (#070b14) с живым canvas-полем света за всем контентом",
       "Ровно один акцент — электрический голубой (#4d6bfe); свечение только у него",
       "Manrope (самохостинг, 400–800) для интерфейса, JetBrains Mono для «терминальных» подписей, тегов и печатающегося текста",
       "Тонкие 1px-рамки на едином радиусе 14px; никаких тяжёлых теней и градиентных кнопок",
       "Единый язык появления: Reveal (подъём + blur-растворение) + typewriter + медленный дрейф орбов",
-      "Доказательства вместо обещаний: реальные кейсы и реальные фото команды"
+      "Доказательства вместо обещаний: 8 реальных кейсов с авторскими SVG-пиктограммами в языке мира и реальные фото команды"
     ],
     "rules": [
       { "name": "The One Voice Rule", "body": "В системе ровно один акцентный цвет. Не вводить второй акцент, не переключать акцент по секциям, не использовать тёплые акцентные цвета. Если элемент «хочет» новый цвет — ему нужна другая роль (текст, рамка, заливка панели), а не другой цвет.", "section": "colors" },
@@ -180,7 +189,7 @@
       "Do рамки 1px Hairline и радиус 14px для всех новых карточек, строк и кнопок; hover — смена рамки на rgba(109, 134, 255, 0.5) плюс микросдвиг.",
       "Do появление новых блоков через Reveal (подъём 28px + blur 6px → 0.7s, ease [0.16, 1, 0.3, 1]) и соблюдать prefers-reduced-motion: статичный кадр поля, отключённые анимации каретки/подсказки/переходов.",
       "Do тёмные браузерные поверхности в тон миру: скроллбар (трек Deep Terminal, ползунок #1c2740, hover #2a3a5e), selection — rgba(77, 107, 254, 0.35) с белым текстом, focus-visible — outline 2px #6d86ff, offset 3px.",
-      "Do использовать для кейсов и команды только реальные ассеты владельцев (src/assets/images/cases, src/assets/images/team) и сохранять provenance: иллюстрации кейсов нарисованы командой, фото — реальные фотографии членов команды; каждый новый растр — с зафиксированным источником.",
+      "Do использовать для кейсов и команды только ассеты владельцев и сохранять provenance: медиа кейсов — авторские SVG-пиктограммы (src/assets/images/cases/*.svg, 8 штук, созданы специально для сайта в языке мира: тёмная панель, точечная сетка, линии 2px в #4D6BFE/#6D86FF), фото команды — реальные растровые фотографии (src/assets/images/team); каждый новый ассет — с зафиксированным источником.",
       "Do проверять контраст: Dim Frost на Terminal Ink держится для вторичного текста, основной текст — только Frost Text; акцентный текст Bright Electric Blue — только крупным шрифтом или в элементах с запасом по контрасту."
     ],
     "donts": [
@@ -188,7 +197,7 @@
       "Don't добавлять второй акцентный цвет, градиентные заливки кнопок, тёплые оттенки и цветные иконки вне акцентной пары.",
       "Don't оставлять тени на карточках в покое и добавлять новые тени — Accent Lift существует только у hover основной кнопки.",
       "Don't подключать шрифты с CDN или добавлять начертания/шрифты вне заявленных (Manrope 400–800, JetBrains Mono 400/500, самохостинг woff2).",
-      "Don't заменять реальные кейсы/фото стоковыми изображениями или сгенерированными людьми/продуктами; provenance растров нельзя обесценивать.",
+      "Don't заменять авторские SVG-пиктограммы кейсов или реальные фото команды стоковыми и генеративными изображениями, не выводить SVG-иллюстрации за палитру мира (тёплые цвета, лишние акценты, фотореализм); provenance ассетов нельзя обесценивать.",
       "Don't изобретать новые анимации появления в обход Reveal и плодить постоянные (не откликающиеся) анимации: движение — либо механика терминала, либо отклик на hover.",
       "Don't пренебрегать prefers-reduced-motion: typewriter, поле, Reveal и hover-переходы обязаны иметь статичное поведение."
     ]

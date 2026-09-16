@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1428"/>
+      <stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#94A3B8" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="220" fill="url(#bg)"/>
+  <rect width="400" height="220" fill="url(#dots)"/>
+
+  <!-- радиоволны -->
+  <g fill="none" stroke="#6D86FF" stroke-width="2" stroke-linecap="round">
+    <path d="M158 78 A 46 46 0 0 0 158 122" opacity="0.9"/>
+    <path d="M140 62 A 68 68 0 0 0 140 138" opacity="0.6"/>
+    <path d="M122 46 A 92 92 0 0 0 122 154" opacity="0.35"/>
+    <path d="M242 78 A 46 46 0 0 1 242 122" opacity="0.9"/>
+    <path d="M260 62 A 68 68 0 0 1 260 138" opacity="0.6"/>
+    <path d="M278 46 A 92 92 0 0 1 278 154" opacity="0.35"/>
+  </g>
+
+  <!-- антенна -->
+  <path d="M200 40 V74" stroke="#6D86FF" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="200" cy="36" r="5" fill="#4D6BFE"/>
+  <path d="M186 56 H214" stroke="#6D86FF" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- приёмник -->
+  <rect x="164" y="100" width="72" height="56" rx="10" fill="#4D6BFE" opacity="0.14" stroke="#6D86FF" stroke-width="2"/>
+  <rect x="176" y="112" width="30" height="16" rx="3" fill="none" stroke="#6D86FF" stroke-width="2"/>
+  <path d="M176 140 h10 M192 140 h8 M206 140 h6" stroke="#6D86FF" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="224" cy="120" r="4" fill="#4D6BFE"/>
+
+  <!-- несущая: осциллограмма -->
+  <path d="M60 186 q10 -18 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#33415E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M260 186 q10 -18 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#33415E" stroke-width="2" stroke-linecap="round"/>
+</svg>

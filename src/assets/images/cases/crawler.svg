@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1428"/>
+      <stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#94A3B8" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="220" fill="url(#bg)"/>
+  <rect width="400" height="220" fill="url(#dots)"/>
+
+  <!-- источники данных -->
+  <g fill="#0C1428" stroke="#4D6BFE" stroke-width="2">
+    <circle cx="42" cy="52" r="7"/>
+    <circle cx="42" cy="92" r="7"/>
+    <circle cx="42" cy="132" r="7"/>
+    <circle cx="42" cy="172" r="7"/>
+  </g>
+  <g fill="#4D6BFE">
+    <circle cx="42" cy="52" r="2.5"/>
+    <circle cx="42" cy="92" r="2.5"/>
+    <circle cx="42" cy="132" r="2.5"/>
+    <circle cx="42" cy="172" r="2.5"/>
+  </g>
+
+  <!-- конвергенция потоков -->
+  <g stroke="#4D6BFE" stroke-width="2" opacity="0.55" fill="none">
+    <path d="M52 52 C 110 52, 120 100, 168 104"/>
+    <path d="M52 92 C 110 92, 125 102, 168 106"/>
+    <path d="M52 132 C 110 132, 125 110, 168 108"/>
+    <path d="M52 172 C 110 172, 120 116, 168 110"/>
+  </g>
+
+  <!-- узел-обработчик -->
+  <path d="M188 86 L216 102 L216 116 L188 132 L160 116 L160 102 Z" fill="#0C1428" stroke="#6D86FF" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="188" cy="109" r="7" fill="#4D6BFE"/>
+
+  <!-- поток в ценник -->
+  <path d="M222 108 H 262" stroke="#6D86FF" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+  <path d="M258 101 L270 108 L258 115" stroke="#6D86FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ценник -->
+  <g transform="rotate(-8 320 108)">
+    <path d="M292 82 H 348 L366 100 L348 118 H292 Z" fill="#4D6BFE" opacity="0.16" stroke="#6D86FF" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="300" cy="100" r="4" fill="#0C1428" stroke="#6D86FF" stroke-width="2"/>
+    <path d="M316 93 V 107 M310 100 H 322" stroke="#6D86FF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

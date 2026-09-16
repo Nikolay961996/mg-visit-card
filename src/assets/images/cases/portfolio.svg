@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1428"/>
+      <stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#94A3B8" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="220" fill="url(#bg)"/>
+  <rect width="400" height="220" fill="url(#dots)"/>
+
+  <!-- прожектор -->
+  <path d="M200 18 L156 62 H244 Z" fill="#4D6BFE" opacity="0.10"/>
+  <circle cx="200" cy="20" r="5" fill="#4D6BFE"/>
+
+  <!-- рама картины -->
+  <rect x="128" y="58" width="144" height="108" rx="6" fill="#0C1428" stroke="#6D86FF" stroke-width="2.5"/>
+  <rect x="140" y="70" width="120" height="84" rx="3" fill="#090F1E" stroke="#33415E" stroke-width="2"/>
+
+  <!-- композиция внутри: геометрическая живопись -->
+  <circle cx="176" cy="100" r="17" fill="#4D6BFE" opacity="0.85"/>
+  <path d="M214 84 L240 128 H188 Z" fill="none" stroke="#6D86FF" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M150 134 L206 78" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <rect x="146" y="78" width="12" height="12" rx="2" fill="#6D86FF" opacity="0.5"/>
+
+  <!-- подпись-строчка под рамой -->
+  <path d="M162 180 H238" stroke="#33415E" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="200" cy="180" r="2.5" fill="#4D6BFE"/>
+</svg>

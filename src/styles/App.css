@@ -555,6 +555,10 @@ body {
     gap: 1.75rem;
 }
 
+.case-card-wrap {
+    display: flex;
+}
+
 .case-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -563,6 +567,12 @@ body {
     transition: border-color 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.case-card-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .case-card:hover {

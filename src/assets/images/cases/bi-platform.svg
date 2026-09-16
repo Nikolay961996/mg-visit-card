@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1428"/>
+      <stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#94A3B8" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="220" fill="url(#bg)"/>
+  <rect width="400" height="220" fill="url(#dots)"/>
+
+  <!-- столбчатая диаграмма -->
+  <g fill="#4D6BFE" opacity="0.3">
+    <rect x="64" y="146" width="26" height="34" rx="4"/>
+    <rect x="100" y="126" width="26" height="54" rx="4"/>
+    <rect x="136" y="106" width="26" height="74" rx="4"/>
+    <rect x="172" y="86" width="26" height="94" rx="4"/>
+  </g>
+  <g stroke="#6D86FF" stroke-width="2" fill="none">
+    <rect x="64" y="146" width="26" height="34" rx="4"/>
+    <rect x="100" y="126" width="26" height="54" rx="4"/>
+    <rect x="136" y="106" width="26" height="74" rx="4"/>
+    <rect x="172" y="86" width="26" height="94" rx="4"/>
+  </g>
+
+  <!-- линия тренда -->
+  <polyline points="77,138 113,112 149,124 185,74 221,92" fill="none" stroke="#6D86FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0C1428" stroke="#6D86FF" stroke-width="2">
+    <circle cx="77" cy="138" r="4.5"/>
+    <circle cx="113" cy="112" r="4.5"/>
+    <circle cx="149" cy="124" r="4.5"/>
+    <circle cx="185" cy="74" r="4.5"/>
+    <circle cx="221" cy="92" r="4.5"/>
+  </g>
+
+  <!-- кольцевая диаграмма -->
+  <circle cx="300" cy="104" r="42" fill="none" stroke="#33415E" stroke-width="10"/>
+  <path d="M300 62 A 42 42 0 0 1 338 122" fill="none" stroke="#4D6BFE" stroke-width="10" stroke-linecap="round"/>
+  <path d="M338 122 A 42 42 0 0 1 282 138" fill="none" stroke="#6D86FF" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="300" cy="104" r="6" fill="#0C1428" stroke="#6D86FF" stroke-width="2"/>
+
+  <!-- ось -->
+  <path d="M56 180 H344" stroke="#33415E" stroke-width="2" stroke-linecap="round"/>
+</svg>

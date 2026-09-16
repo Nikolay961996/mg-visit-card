@@ -1,11 +1,14 @@
+import { ArrowUpRight } from 'lucide-react'
 import Reveal from './Reveal'
 
-import crawlerImage from '../assets/images/cases/crawler.jpg'
-import fuelImage from '../assets/images/cases/fuel-system.jpg'
-import messengerImage from '../assets/images/cases/messenger.jpg'
-import radiotechImage from '../assets/images/cases/radiotech.jpg'
-import wifiImage from '../assets/images/cases/wifi-sniffer.jpg'
-import biImage from '../assets/images/cases/bi-platform.jpg'
+import crawlerImage from '../assets/images/cases/crawler.svg'
+import fuelImage from '../assets/images/cases/fuel-system.svg'
+import messengerImage from '../assets/images/cases/messenger.svg'
+import radiotechImage from '../assets/images/cases/radiotech.svg'
+import wifiImage from '../assets/images/cases/wifi-sniffer.svg'
+import biImage from '../assets/images/cases/bi-platform.svg'
+import portfolioImage from '../assets/images/cases/portfolio.svg'
+import kcentrImage from '../assets/images/cases/kcentr.svg'
 
 const CASES = [
     {
@@ -50,7 +53,49 @@ const CASES = [
         description:
             'Система бизнес-аналитики для анализа продаж и прогнозирования спроса.',
     },
+    {
+        image: portfolioImage,
+        tag: 'веб / портфолио',
+        title: 'Сайт-портфолио для художницы',
+        description:
+            'Авторский сайт с портфолио работ, выполненный на заказ: aliyashagieva.art.',
+        link: 'https://aliyashagieva.art',
+    },
+    {
+        image: kcentrImage,
+        tag: 'платформа / fullstack',
+        title: 'Платформа для психологов kcentru.ru',
+        description:
+            'Сложный сайт с CMS-админкой: ролевая модель и авторизация, динамический контент, интеграция почтового сервиса, PostgreSQL, бэкенд на C#, генерация отчётов в PDF.',
+        link: 'https://kcentru.ru',
+    },
 ]
+
+const CaseCard = ({ caseItem }) => {
+    const body = (
+        <>
+            <div className="case-media">
+                <img src={caseItem.image} alt={caseItem.title} loading="lazy" />
+            </div>
+            <div className="case-body">
+                <span className="case-tag">
+                    {caseItem.tag}
+                    {caseItem.link && <ArrowUpRight size={13} strokeWidth={2} style={{ verticalAlign: '-2px', marginLeft: '4px' }} />}
+                </span>
+                <h3>{caseItem.title}</h3>
+                <p>{caseItem.description}</p>
+            </div>
+        </>
+    )
+
+    return caseItem.link ? (
+        <a className="case-card case-card-link" href={caseItem.link} target="_blank" rel="noreferrer">
+            {body}
+        </a>
+    ) : (
+        <div className="case-card">{body}</div>
+    )
+}
 
 const Cases = () => {
     return (
@@ -61,15 +106,8 @@ const Cases = () => {
                 </Reveal>
                 <div className="cases-grid">
                     {CASES.map((caseItem, index) => (
-                        <Reveal as="div" className="case-card" key={index} delay={(index % 2) * 0.1}>
-                            <div className="case-media">
-                                <img src={caseItem.image} alt={caseItem.title} loading="lazy" />
-                            </div>
-                            <div className="case-body">
-                                <span className="case-tag">{caseItem.tag}</span>
-                                <h3>{caseItem.title}</h3>
-                                <p>{caseItem.description}</p>
-                            </div>
+                        <Reveal as="div" className="case-card-wrap" key={index} delay={(index % 2) * 0.1}>
+                            <CaseCard caseItem={caseItem} />
                         </Reveal>
                     ))}
                 </div>

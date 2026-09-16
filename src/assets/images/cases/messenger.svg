@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1428"/>
+      <stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#94A3B8" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="220" fill="url(#bg)"/>
+  <rect width="400" height="220" fill="url(#dots)"/>
+
+  <!-- сообщение 1 -->
+  <rect x="66" y="58" width="128" height="62" rx="14" fill="#4D6BFE" opacity="0.16" stroke="#6D86FF" stroke-width="2"/>
+  <path d="M96 120 L88 138 L114 120" fill="#4D6BFE" opacity="0.16" stroke="#6D86FF" stroke-width="2" stroke-linejoin="round"/>
+  <g stroke="#6D86FF" stroke-width="2" stroke-linecap="round" opacity="0.85">
+    <path d="M84 80 H172"/>
+    <path d="M84 97 H148"/>
+  </g>
+
+  <!-- сообщение 2 -->
+  <rect x="206" y="104" width="128" height="62" rx="14" fill="#0C1428" stroke="#6D86FF" stroke-width="2"/>
+  <path d="M304 166 L312 184 L286 166" fill="#0C1428" stroke="#6D86FF" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M222 135 l8 8 l16 -16" stroke="#6D86FF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- замок на стыке -->
+  <g transform="translate(186 96)">
+    <rect x="-13" y="-2" width="26" height="22" rx="5" fill="#4D6BFE" stroke="#6D86FF" stroke-width="2"/>
+    <path d="M-7 -2 V-8 a7 7 0 0 1 14 0 V-2" fill="none" stroke="#6D86FF" stroke-width="2"/>
+    <circle cx="0" cy="9" r="2.6" fill="#0C1428"/>
+  </g>
+
+  <!-- индикаторы статуса -->
+  <circle cx="346" cy="62" r="4" fill="#4D6BFE"/>
+  <circle cx="332" cy="62" r="4" fill="#4D6BFE" opacity="0.5"/>
+  <circle cx="318" cy="62" r="4" fill="#4D6BFE" opacity="0.25"/>
+</svg>

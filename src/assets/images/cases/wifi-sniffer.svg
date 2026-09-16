@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1428"/>
+      <stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#94A3B8" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="220" fill="url(#bg)"/>
+  <rect width="400" height="220" fill="url(#dots)"/>
+
+  <!-- развязка дороги -->
+  <g stroke="#33415E" stroke-width="2" fill="none">
+    <path d="M108 220 L178 96"/>
+    <path d="M292 220 L222 96"/>
+    <path d="M200 220 V102" stroke-dasharray="7 9"/>
+  </g>
+
+  <!-- точка анализа над развязкой -->
+  <circle cx="200" cy="74" r="6" fill="#4D6BFE"/>
+
+  <!-- wi-fi дуги от точки -->
+  <g fill="none" stroke="#6D86FF" stroke-width="2" stroke-linecap="round">
+    <path d="M182 66 A 24 24 0 0 1 218 66" opacity="0.9"/>
+    <path d="M168 54 A 42 42 0 0 1 232 54" opacity="0.6"/>
+    <path d="M154 42 A 60 60 0 0 1 246 42" opacity="0.35"/>
+  </g>
+
+  <!-- захваченные пакеты: точки вдоль дуг -->
+  <g fill="#6D86FF">
+    <circle cx="188" cy="59" r="3"/>
+    <circle cx="214" cy="48" r="3" opacity="0.75"/>
+    <circle cx="236" cy="37" r="3" opacity="0.5"/>
+  </g>
+
+  <!-- датчики на магистралях -->
+  <g fill="#0C1428" stroke="#6D86FF" stroke-width="2">
+    <circle cx="152" cy="152" r="8"/>
+    <circle cx="248" cy="152" r="8"/>
+  </g>
+  <g fill="#4D6BFE">
+    <circle cx="152" cy="152" r="2.6"/>
+    <circle cx="248" cy="152" r="2.6"/>
+  </g>
+  <path d="M152 144 V96 M248 144 V96" stroke="#4D6BFE" stroke-width="1.5" stroke-dasharray="3 4"/>
+</svg>
