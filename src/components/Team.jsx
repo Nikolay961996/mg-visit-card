@@ -1,192 +1,89 @@
-import React from 'react'
+import { Trophy } from 'lucide-react'
+import Reveal from './Reveal'
 
-// Импортируем фото команды
 import ekaterinaPhoto from '../assets/images/team/ekaterina.jpg'
 import nikolayPhoto from '../assets/images/team/nikolay.jpg'
 
+const TEAM = [
+    {
+        photo: ekaterinaPhoto,
+        name: 'Иванова Екатерина',
+        role: 'Team Lead / Developer',
+        experience: '4+ лет опыта',
+        skills: ['C#', 'React', 'Angular', 'Python', 'Аналитика', 'Работа с заказчиками'],
+        achievements: 'Эксперт в выявлении и решении проблем заказчиков',
+        previous: 'Myrtex, MBI',
+    },
+    {
+        photo: nikolayPhoto,
+        name: 'Иванов Николай',
+        role: 'Tech Lead / Senior FullStack Developer',
+        experience: '8+ лет опыта',
+        skills: ['C#', 'Go', 'Python', 'C', 'Микросервисы', 'Архитектура', 'Highload', 'React'],
+        achievements: 'Ведущий разработчик в большинстве проектов, эксперт в сложных системах',
+        previous: 'Ozon Tech, Alfa Bank, Myrtex',
+    },
+]
+
+const ACHIEVEMENTS = [
+    'Победители хакатона ЛЦТ 2024',
+    'Призёры Аэротон 2024',
+    'Призёры XMASHACK 2023',
+    'Призёры TenderHack 2022 и 2023',
+    'Спикеры на конференциях React Conf и HolyJS',
+    'Партнёрства с командами в разных странах',
+]
+
 const Team = () => {
-    const teamMembers = [
-        {
-            photo: ekaterinaPhoto,
-            name: "Иванова Екатерина",
-            role: "Team Lead / Developer",
-            experience: "4+ лет опыта",
-            skills: ["MBI", "Анализ", "Сотрудничество", "Бизнес-идеи", "C#", "React", "Angular", "Python", "C"],
-            achievements: "Эксперт в сфере выявлений и решений проблем заказчиков",
-            previous: "Myrtex, MBI, Мама-предприниматель, Акселератор"
-        },
-        {
-            photo: nikolayPhoto,
-            name: "Иванов Николай",
-            role: "Tech Lead / Senior FullStack Developer",
-            experience: "8+ лет опыта",
-            skills: ["C#", "GO", "Python", "C", "Microservices", "Architecture", "Highload", "Databases", "React", "Angular"],
-            achievements: "Ведущий разработчик в большинстве проектов, эксперт в сложных системах",
-            previous: "Ozon Tech, Alfa Bank, Myrtex"
-        },
-    ]
-
-    const achievements = [
-        {
-            text: "Победители хакатона ЛЦТ 2024"
-        },
-        {
-            text: "Призеры Аэротон 2024"
-        },
-        {
-            text: "Призеры XMASHACK 2023"
-        },
-        {
-            text: "Призеры TenderHack 2022 и 2023"
-        },
-        {
-            text: "Спикеры на конференциях React Conf, HolyJS"
-        },
-        {
-            text: "Партнёрство с интересными людьми в разных странах"
-        }
-    ]
-
     return (
-        <section id="team" className="section section-light">
+        <section id="team" className="section">
             <div className="container">
-                <h2 className="section-title">Наша публичная команда</h2>
+                <Reveal as="h2" className="section-title">
+                    Команда
+                </Reveal>
 
                 <div className="team-grid">
-                    {teamMembers.map((member, index) => (
-                        <div key={index} className="team-member">
-                            <div className="member-photo">
-                                <img
-                                    src={member.photo}
-                                    alt={member.name}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        borderRadius: '50%'
-                                    }}
-                                />
-                            </div>
-                            <h3>{member.name}</h3>
-                            <p style={{ fontWeight: 'bold', color: '#667eea', marginBottom: '0.5rem' }}>
-                                {member.role}
-                            </p>
-                            <p style={{ color: '#666', marginBottom: '1rem' }}>{member.experience}</p>
-
-                            <div style={{ margin: '1rem 0' }}>
-                                <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#333' }}>
-                                    Навыки:
-                                </h4>
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                                    {member.skills.map((skill, skillIndex) => (
-                                        <span
-                                            key={skillIndex}
-                                            style={{
-                                                background: '#f1f3f4',
-                                                padding: '0.3rem 0.8rem',
-                                                borderRadius: '20px',
-                                                fontSize: '0.85rem',
-                                                color: '#555'
-                                            }}
-                                        >
-                      {skill}
-                    </span>
-                                    ))}
+                    {TEAM.map((member, index) => (
+                        <Reveal as="div" className="team-member" key={index} delay={index * 0.12}>
+                            <div className="member-head">
+                                <div className="member-photo">
+                                    <img src={member.photo} alt={member.name} loading="lazy" />
+                                </div>
+                                <div>
+                                    <div className="member-name">{member.name}</div>
+                                    <div className="member-role">{member.role}</div>
+                                    <div className="member-exp">{member.experience}</div>
                                 </div>
                             </div>
-
-                            <p style={{ fontStyle: 'italic', opacity: 0.8, margin: '1rem 0' }}>
-                                {member.achievements}
+                            <div className="member-skills">
+                                {member.skills.map((skill) => (
+                                    <span className="skill-chip" key={skill}>
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                            <p className="member-achievements">{member.achievements}</p>
+                            <p className="member-previous">
+                                <span>Опыт:</span> {member.previous}
                             </p>
-
-                            <p style={{ fontSize: '0.9rem', color: '#888' }}>
-                                <strong>Ранее:</strong> {member.previous}
-                            </p>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
 
-                {/* Секция достижений */}
-                <div style={{ marginTop: '4rem', textAlign: 'center' }}>
-                    <h3 style={{ marginBottom: '3rem', fontSize: '2rem' }}>Наши достижения</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                        gap: '2rem',
-                        maxWidth: '1000px',
-                        margin: '0 auto'
-                    }}>
-                        {achievements.map((achievement, index) => (
-                            <div
-                                key={index}
-                                style={{
-                                    background: 'white',
-                                    padding: '2rem',
-                                    borderRadius: '15px',
-                                    boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: '1.5rem',
-                                    textAlign: 'left'
-                                }}
-                            >
-                                <p style={{
-                                    margin: 0,
-                                    fontSize: '1.1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {achievement.text}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Дополнительная статистика */}
-                <div style={{
-                    marginTop: '4rem',
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    color: 'white',
-                    padding: '3rem 2rem',
-                    borderRadius: '20px',
-                    textAlign: 'center'
-                }}>
-                    <h3 style={{ marginBottom: '2rem', fontSize: '1.8rem' }}>
-                        В цифрах
+                <Reveal as="div" className="achievements">
+                    <h3>
+                        <Trophy size={20} strokeWidth={1.8} style={{ verticalAlign: '-4px', marginRight: '10px', color: 'var(--accent-bright)' }} />
+                        Достижения
                     </h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                        gap: '2rem',
-                        maxWidth: '800px',
-                        margin: '0 auto'
-                    }}>
-                        <div>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-                                10+
-                            </div>
-                            <div>Реализованных проектов</div>
-                        </div>
-                        <div>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-                                8 лет
-                            </div>
-                            <div>Средний опыт в IT</div>
-                        </div>
-                        <div>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-                                95%
-                            </div>
-                            <div>Успешных проектов</div>
-                        </div>
-                        <div>
-                            <div style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-                                24/7
-                            </div>
-                            <div>Поддержка клиентов</div>
-                        </div>
-                    </div>
-                </div>
+                    <ul className="achievements-list">
+                        {ACHIEVEMENTS.map((item, index) => (
+                            <li key={index}>
+                                <span className="achievement-mark">*</span>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </Reveal>
             </div>
         </section>
     )

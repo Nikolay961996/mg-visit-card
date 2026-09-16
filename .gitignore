@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Impeccable: review artifacts, local tooling
+.impeccable/review
+.impeccable/mocks
+.impeccable/build
+.venv

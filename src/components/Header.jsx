@@ -1,100 +1,46 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
+
+const NAV = [
+    { id: 'services', label: 'Услуги' },
+    { id: 'cases', label: 'Кейсы' },
+    { id: 'team', label: 'Команда' },
+    { id: 'contact', label: 'Контакты' },
+]
 
 const Header = () => {
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-            const offset = 80
-            const elementPosition = element.getBoundingClientRect().top
-            const offsetPosition = elementPosition + window.pageYOffset - offset
+    const [scrolled, setScrolled] = useState(false)
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            })
-        }
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 24)
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
+
+    const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
     }
 
     return (
-        <header style={{
-            position: 'fixed',
-            top: 0,
-            width: '100%',
-            background: 'rgba(255, 255, 255, 0.95)',
-            backdropFilter: 'blur(10px)',
-            zIndex: 1000,
-            padding: '1rem 0',
-            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
-        }}>
-            <div className="container">
-                <nav style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center'
-                }}>
-                    <div style={{
-                        fontSize: '1.5rem',
-                        fontWeight: 'bold',
-                        color: '#333',
-                        cursor: 'pointer'
-                    }} onClick={() => scrollToSection('hero')}>
-                        MadGeeks
-                    </div>
-                    <div style={{ display: 'flex', gap: '2rem' }}>
+        <header className={`header${scrolled ? ' header-scrolled' : ''}`}>
+            <div className="container header-inner">
+                <button className="logo" onClick={() => scrollToSection('hero')}>
+                    MadGeeks<span className="logo-accent">.</span>
+                </button>
+                <nav className="nav" aria-label="Основная навигация">
+                    {NAV.map((item) => (
                         <button
-                            onClick={() => scrollToSection('services')}
-                            style={{
-                                border: 'none',
-                                background: 'none',
-                                color: '#333',
-                                fontWeight: '500',
-                                cursor: 'pointer',
-                                fontSize: '1rem'
-                            }}
+                            key={item.id}
+                            className="nav-link"
+                            onClick={() => scrollToSection(item.id)}
                         >
-                            Услуги
+                            {item.label}
                         </button>
-                        <button
-                            onClick={() => scrollToSection('cases')}
-                            style={{
-                                border: 'none',
-                                background: 'none',
-                                color: '#333',
-                                fontWeight: '500',
-                                cursor: 'pointer',
-                                fontSize: '1rem'
-                            }}
-                        >
-                            Кейсы
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('team')}
-                            style={{
-                                border: 'none',
-                                background: 'none',
-                                color: '#333',
-                                fontWeight: '500',
-                                cursor: 'pointer',
-                                fontSize: '1rem'
-                            }}
-                        >
-                            Команда
-                        </button>
-                        <button
-                            onClick={() => scrollToSection('contact')}
-                            style={{
-                                border: 'none',
-                                background: 'none',
-                                color: '#333',
-                                fontWeight: '500',
-                                cursor: 'pointer',
-                                fontSize: '1rem'
-                            }}
-                        >
-                            Контакты
-                        </button>
-                    </div>
+                    ))}
                 </nav>
+                <button className="cta-button header-cta" onClick={() => scrollToSection('contact')}>
+                    Связаться
+                </button>
             </div>
         </header>
     )

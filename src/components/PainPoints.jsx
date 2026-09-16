@@ -1,20 +1,25 @@
-import React from 'react'
+import Reveal from './Reveal'
+
+const PAIN_POINTS = [
+    'Сложно объяснить разработчикам, что именно вам нужно?',
+    'Никто не берётся за вашу нестандартную задачу?',
+    'Боитесь потратить бюджет и время впустую?',
+]
 
 const PainPoints = () => {
     return (
-        <section id="pain" className="section section-light">
+        <section id="pain" className="section">
             <div className="container">
-                <h2 className="section-title">Знакомо?</h2>
-                <div className="pain-points">
-                    <div className="pain-point">
-                        «Вам сложно объяснить разработчикам, что именно вам нужно?»
-                    </div>
-                    <div className="pain-point">
-                        «Никто не может разработать для вас сложное ПО?»
-                    </div>
-                    <div className="pain-point">
-                        «Боитесь потратить бюджет и время впустую?»
-                    </div>
+                <Reveal as="h2" className="section-title section-title-center">
+                    Знакомо?
+                </Reveal>
+                <div className="pain-list">
+                    {PAIN_POINTS.map((point, index) => (
+                        <Reveal as="div" className="pain-point" key={index} delay={index * 0.12}>
+                            <span className="pain-mark">&gt;</span>
+                            <span>{point}</span>
+                        </Reveal>
+                    ))}
                 </div>
             </div>
         </section>

@@ -1,30 +1,24 @@
-import React from 'react'
-
 const Footer = () => {
+    const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return (
         <footer className="footer">
-            <div className="container">
-                <div style={{ textAlign: 'center' }}>
-                    <h3 style={{ marginBottom: '1rem', fontSize: '2rem' }}>MadGeeks</h3>
-                    <p style={{ opacity: 0.8, marginBottom: '2rem' }}>
-                        Разработка простых и сложных IT-решений для бизнеса и производства
-                    </p>
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        gap: '2rem',
-                        marginBottom: '2rem',
-                        flexWrap: 'wrap'
-                    }}>
-                        <a href="#services" style={{ color: 'white', textDecoration: 'none' }}>Услуги</a>
-                        <a href="#cases" style={{ color: 'white', textDecoration: 'none' }}>Кейсы</a>
-                        <a href="#team" style={{ color: 'white', textDecoration: 'none' }}>Команда</a>
-                        <a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>Контакты</a>
-                    </div>
-                    <p style={{ opacity: 0.6 }}>
-                        © 2025 MadGeeks. Все права защищены.
-                    </p>
+            <div className="container footer-inner">
+                <div className="footer-logo">
+                    MadGeeks<span className="logo-accent">.</span>
                 </div>
+                <p className="footer-tagline">
+                    Разработка простых и сложных IT-решений для бизнеса и производства
+                </p>
+                <nav className="footer-nav" aria-label="Навигация в подвале">
+                    <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services') }}>Услуги</a>
+                    <a href="#cases" onClick={(e) => { e.preventDefault(); scrollToSection('cases') }}>Кейсы</a>
+                    <a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team') }}>Команда</a>
+                    <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>Контакты</a>
+                </nav>
+                <p className="footer-copy">© 2026 MadGeeks</p>
             </div>
         </footer>
     )

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T19:32:22Z",
+  "title": "Design System: MadGeeks",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Terminal Ink",
+        "canonical": "#070b14",
+        "tonalRamp": ["oklch(8% 0.01 258)", "oklch(12% 0.02 258)", "oklch(18% 0.025 258)", "oklch(26% 0.03 258)", "oklch(36% 0.035 258)", "oklch(50% 0.04 258)", "oklch(70% 0.03 258)", "oklch(92% 0.01 258)"]
+      },
+      "bg-deep": {
+        "role": "neutral",
+        "displayName": "Deep Terminal",
+        "canonical": "#05080f",
+        "tonalRamp": ["oklch(6% 0.01 258)", "oklch(10% 0.015 258)", "oklch(15% 0.02 258)", "oklch(22% 0.025 258)", "oklch(32% 0.03 258)", "oklch(46% 0.035 258)", "oklch(66% 0.03 258)", "oklch(90% 0.01 258)"]
+      },
+      "bg-panel": {
+        "role": "neutral",
+        "displayName": "Panel Ink",
+        "canonical": "#0a1020",
+        "tonalRamp": ["oklch(9% 0.015 258)", "oklch(14% 0.025 258)", "oklch(19% 0.03 258)", "oklch(28% 0.035 258)", "oklch(38% 0.04 258)", "oklch(52% 0.04 258)", "oklch(72% 0.03 258)", "oklch(93% 0.01 258)"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(148, 163, 184, 0.14)",
+        "tonalRamp": ["oklch(20% 0.02 255 / 0.14)", "oklch(30% 0.03 255 / 0.14)", "oklch(40% 0.04 255 / 0.14)", "oklch(50% 0.05 255 / 0.14)", "oklch(60% 0.05 255 / 0.14)", "oklch(70% 0.04 255 / 0.14)", "oklch(80% 0.03 255 / 0.14)", "oklch(90% 0.02 255 / 0.14)"]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(148, 163, 184, 0.28)",
+        "tonalRamp": ["oklch(20% 0.02 255 / 0.28)", "oklch(30% 0.03 255 / 0.28)", "oklch(40% 0.04 255 / 0.28)", "oklch(50% 0.05 255 / 0.28)", "oklch(60% 0.05 255 / 0.28)", "oklch(70% 0.04 255 / 0.28)", "oklch(80% 0.03 255 / 0.28)", "oklch(90% 0.02 255 / 0.28)"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Frost Text",
+        "canonical": "#e7ecf5",
+        "tonalRamp": ["oklch(20% 0.02 255)", "oklch(30% 0.025 255)", "oklch(40% 0.03 255)", "oklch(52% 0.03 255)", "oklch(64% 0.025 255)", "oklch(76% 0.02 255)", "oklch(88% 0.01 255)", "oklch(95% 0.005 255)"]
+      },
+      "text-dim": {
+        "role": "neutral",
+        "displayName": "Dim Frost",
+        "canonical": "#9aa7bd",
+        "tonalRamp": ["oklch(18% 0.02 255)", "oklch(26% 0.03 255)", "oklch(34% 0.035 255)", "oklch(44% 0.04 255)", "oklch(54% 0.04 255)", "oklch(64% 0.035 255)", "oklch(76% 0.025 255)", "oklch(90% 0.01 255)"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Electric Blue",
+        "canonical": "#4d6bfe",
+        "tonalRamp": ["oklch(18% 0.06 264)", "oklch(26% 0.12 264)", "oklch(34% 0.17 264)", "oklch(42% 0.2 264)", "oklch(50% 0.22 264)", "oklch(55% 0.22 264)", "oklch(70% 0.17 264)", "oklch(88% 0.06 264)"]
+      },
+      "accent-bright": {
+        "role": "primary",
+        "displayName": "Bright Electric Blue",
+        "canonical": "#6d86ff",
+        "tonalRamp": ["oklch(22% 0.07 262)", "oklch(30% 0.13 262)", "oklch(38% 0.18 262)", "oklch(46% 0.2 262)", "oklch(55% 0.21 262)", "oklch(62% 0.2 262)", "oklch(75% 0.15 262)", "oklch(90% 0.05 262)"]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Soft Accent Wash",
+        "canonical": "rgba(77, 107, 254, 0.14)",
+        "tonalRamp": ["oklch(18% 0.06 264 / 0.14)", "oklch(26% 0.12 264 / 0.14)", "oklch(34% 0.17 264 / 0.14)", "oklch(42% 0.2 264 / 0.14)", "oklch(50% 0.22 264 / 0.14)", "oklch(55% 0.22 264 / 0.14)", "oklch(70% 0.17 264 / 0.14)", "oklch(88% 0.06 264 / 0.14)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Заголовок hero; единственный уровень такого размера." },
+      "headline": { "displayName": "Headline", "purpose": "Заголовки секций и контактного блока." },
+      "title": { "displayName": "Title", "purpose": "Названия услуг, карточек, имён; текст кнопок (700)." },
+      "body": { "displayName": "Body", "purpose": "Описания и подзаголовки; длина строки до ~46em." },
+      "label": { "displayName": "Label (Mono)", "purpose": "JetBrains Mono: метки, теги, данные, маркеры, typewriter-строка." }
+    },
+    "shadows": [
+      { "name": "accent-lift", "value": "0 12px 32px rgba(77, 107, 254, 0.35)", "purpose": "Единственная тень системы: hover основной кнопки вместе с translateY(-2px)." }
+    ],
+    "motion": [
+      { "name": "reveal", "value": "initial {opacity 0, y 28, blur 6px} → {opacity 1, y 0, blur 0}; duration 0.7s; ease cubic-bezier(0.16, 1, 0.3, 1); viewport once, margin -80px", "purpose": "Единый язык появления любого нового блока (компонент Reveal)." },
+      { "name": "typewriter", "value": "type 55ms/char (+rand 40ms), delete 26ms/char, hold 2100ms", "purpose": "Печать фраз в hero; каретка caret-blink 1.05s steps(1)." },
+      { "name": "ease-standard", "value": "ease 0.25s", "purpose": "Дефолтные hover-переходы кнопок и ссылок." },
+      { "name": "ease-row", "value": "ease 0.3s", "purpose": "Hover-переходы строк, карточек, рамок." },
+      { "name": "ease-media", "value": "ease 0.5s", "purpose": "Зум и насыщенность медиа кейсов; 0.4s — grayscale фото команды." },
+      { "name": "hint-slide", "value": "2.2s ease-in-out infinite", "purpose": "Линия scroll-подсказки в hero." },
+      { "name": "orb-drift", "value": "requestAnimationFrame, sin/cos дрейф, dpr ≤ 1.5", "purpose": "Canvas световое поле; остановка вне вкладки, статичный кадр при prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "900px" },
+      { "name": "sm", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Главный CTA: заливка Electric Blue, белый текст, подъём со свечением только в hover.",
+      "html": "<button class=\"ds-btn-primary\">Обсудить проект</button>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 15px 38px; background: #4d6bfe; color: #fff; border: none; border-radius: 14px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; } .ds-btn-primary:hover { background: #6d86ff; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(77, 107, 254, 0.35); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline: 2px solid #6d86ff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Вторичный CTA: прозрачный, рамка Hairline Strong, hover — акцентная рамка и мягкая заливка, без подъёма.",
+      "html": "<button class=\"ds-btn-ghost\">Смотреть кейсы</button>",
+      "css": ".ds-btn-ghost { display: inline-block; padding: 14px 36px; background: transparent; color: #e7ecf5; border: 1px solid rgba(148, 163, 184, 0.28); border-radius: 14px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 1.05rem; cursor: pointer; transition: border-color 0.25s ease, background-color 0.25s ease; } .ds-btn-ghost:hover { border-color: #6d86ff; background: rgba(77, 107, 254, 0.14); } .ds-btn-ghost:focus-visible { outline: 2px solid #6d86ff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "button-ghost",
+      "description": "Якорная ссылка header: Dim Frost, hover — светлый текст и подчёркивание Electric Blue, выезжающее слева.",
+      "html": "<button class=\"ds-nav-link\">Кейсы</button>",
+      "css": ".ds-nav-link { border: none; background: none; color: #9aa7bd; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.95rem; cursor: pointer; padding: 0.35rem 0; position: relative; transition: color 0.25s ease; } .ds-nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: #4d6bfe; transition: right 0.3s ease; } .ds-nav-link:hover { color: #e7ecf5; } .ds-nav-link:hover::after { right: 0; } .ds-nav-link:focus-visible { outline: 2px solid #6d86ff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Format Chip",
+      "kind": "chip",
+      "refersTo": "chip-mono",
+      "description": "Капсула формата работы: JetBrains Mono, рамка Hairline Strong, полупрозрачная панель. Статична.",
+      "html": "<span class=\"ds-chip\">под ключ</span>",
+      "css": ".ds-chip { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; padding: 0.7rem 1.3rem; border: 1px solid rgba(148, 163, 184, 0.28); border-radius: 999px; color: #e7ecf5; background: rgba(10, 16, 32, 0.55); }"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "chip-mono",
+      "description": "Метка навыка в карточке члена команды: мелкий mono-текст, 8px радиус, приглушённая заливка.",
+      "html": "<span class=\"ds-skill-chip\">React</span>",
+      "css": ".ds-skill-chip { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; padding: 0.35rem 0.75rem; border-radius: 8px; background: rgba(148, 163, 184, 0.08); color: #9aa7bd; border: 1px solid rgba(148, 163, 184, 0.14); }"
+    },
+    {
+      "name": "Case Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Карточка кейса: панель в 1px-рамке, медиа в покое приглушено (saturate 0.85), hover — акцентная рамка, подъём 4px, зум фото и полная насыщенность.",
+      "html": "<article class=\"ds-case-card\"><div class=\"ds-case-media\"></div><div class=\"ds-case-body\"><span class=\"ds-case-tag\">highload</span><h3>Система контроля топлива порта</h3><p>Мониторинг расхода топлива в реальном времени.</p></div></article>",
+      "css": ".ds-case-card { border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 14px; overflow: hidden; background: #0a1020; transition: border-color 0.3s ease, transform 0.3s ease; display: flex; flex-direction: column; max-width: 420px; } .ds-case-card:hover { border-color: rgba(109, 134, 255, 0.5); transform: translateY(-4px); } .ds-case-media { height: 180px; background: linear-gradient(135deg, #1c2740, #0b1122); } .ds-case-body { padding: 1.5rem 1.6rem 1.75rem; display: flex; flex-direction: column; gap: 0.5rem; } .ds-case-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #6d86ff; letter-spacing: 0.02em; } .ds-case-body h3 { margin: 0; font-family: 'Manrope', sans-serif; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.3; color: #e7ecf5; } .ds-case-body p { margin: 0; color: #9aa7bd; font-size: 0.95rem; font-family: 'Manrope', sans-serif; line-height: 1.6; }"
+    },
+    {
+      "name": "Contact Row",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Строка контакта: иконка в акценте, mono-подпись слева, hover — акцентная рамка и сдвиг на 6px.",
+      "html": "<a class=\"ds-contact-row\" href=\"#\"><span class=\"ds-contact-label\">Telegram</span><span>@aphilome</span></a>",
+      "css": ".ds-contact-row { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.4rem; border: 1px solid rgba(148, 163, 184, 0.14); border-radius: 14px; background: rgba(10, 16, 32, 0.55); color: #e7ecf5; text-decoration: none; font-family: 'Manrope', sans-serif; transition: border-color 0.3s ease, transform 0.3s ease; max-width: 460px; } .ds-contact-row:hover { border-color: rgba(109, 134, 255, 0.5); transform: translateX(6px); } .ds-contact-row:focus-visible { outline: 2px solid #6d86ff; outline-offset: 3px; } .ds-contact-label { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #9aa7bd; width: 74px; flex-shrink: 0; }"
+    },
+    {
+      "name": "Typewriter Line",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Печатающаяся mono-строка hero в Bright Electric Blue с мигающей кареткой; для скринридеров текст продублирован в aria-label заголовка.",
+      "html": "<span class=\"ds-typewriter\">Делаем сложное ПО под железо<span class=\"ds-caret\"></span></span>",
+      "css": ".ds-typewriter { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: clamp(1.3rem, 2.6vw, 1.9rem); color: #6d86ff; letter-spacing: -0.01em; } .ds-caret { display: inline-block; width: 0.55ch; height: 1.05em; margin-left: 0.15ch; background: #6d86ff; vertical-align: -0.15em; animation: ds-caret-blink 1.05s steps(1) infinite; } @keyframes ds-caret-blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-caret { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Живой инженерный терминал",
+    "overview": "Это тёмная инженерная витрина, а не светлая карточная лендинг-страница. Сложная разработка показана как спокойная, точная работа машины: глубокий индиго-чёрный фон, над которым дрейфует «дышащее» световое поле из мягких орбов и тонкой точечной сетки. Поверх поля — печатающийся заголовок с мигающим курсором: сайт «печатает» то, что команда делает. Настроение заимствовано у deepseek.com/platform, но визуальный язык собственный.\n\nПлотность средняя, ритм — широкие секции (120px вертикальных отступов) с редкими карточками в тонких 1px-рамках. Материал — матовая тёмная панель, глубина достигается не тенями, а слоением фоновых тонов и свечением только у акцента. Изображения — только реальные ассеты владельцев: иллюстрации собственных кейсов и фотографии команды; стоковая графика запрещена.\n\nИнтерфейс сдержанно отзывчивый: состояния наведения — сдвиги на 4–6px, смена рамки на акцентную, растворение blur при появлении блоков. Никаких резких движений и декоративных эффектов ради эффекта — каждое движение либо несёт смысл (привлекает взгляд к CTA), либо повторяет механику терминала.",
+    "keyCharacteristics": [
+      "Глубокий тёмный индиго-чёрный фон (#070b14) с живым canvas-полем света за всем контентом",
+      "Ровно один акцент — электрический голубой (#4d6bfe); свечение только у него",
+      "Manrope (самохостинг, 400–800) для интерфейса, JetBrains Mono для «терминальных» подписей, тегов и печатающегося текста",
+      "Тонкие 1px-рамки на едином радиусе 14px; никаких тяжёлых теней и градиентных кнопок",
+      "Единый язык появления: Reveal (подъём + blur-растворение) + typewriter + медленный дрейф орбов",
+      "Доказательства вместо обещаний: реальные кейсы и реальные фото команды"
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "В системе ровно один акцентный цвет. Не вводить второй акцент, не переключать акцент по секциям, не использовать тёплые акцентные цвета. Если элемент «хочет» новый цвет — ему нужна другая роль (текст, рамка, заливка панели), а не другой цвет.", "section": "colors" },
+      { "name": "The Accent Rarity Rule", "body": "Электрический голубой — на малой площади: кнопки, маркеры, иконки, каретка. Фоны секций и тексты остаются нейтральными. Акцент, заливший пол-экрана, — ошибка.", "section": "colors" },
+      { "name": "The Mono Is Data Rule", "body": "JetBrains Mono — только за «терминальный» контент: данные, метки, маркеры, печатаемый текст. Обычные предложения и заголовки — всегда Manrope.", "section": "typography" },
+      { "name": "The Self-Host Rule", "body": "Оба шрифта подключены локально из src/assets/fonts/*.woff2 в unicode-подмножествах cyrillic+latin с font-display: swap. Не подключать Google Fonts/CDN и не добавлять начертания вне 400/600/700/800 (Manrope) и 400/500 (JetBrains Mono).", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Поверхности плоские в покое. Тени появляются только как отклик состояния (hover кнопки) и никогда как оформление карточки. Подъём карточек при hover — через transform (translateY(−4px)) и смену рамки, без тени.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do держать фон Terminal Ink (#070b14) и строить глубину слоями тонов Panel Ink / Deep Terminal, а не тенями и не overlay-градиентами поверх контента.",
+      "Do использовать единственный акцент Electric Blue (#4d6bfe) и его производные (bright/soft) для всех интерактивных откликов.",
+      "Do писать метки, теги, данные и маркеры JetBrains Mono, а интерфейсный текст — Manrope.",
+      "Do рамки 1px Hairline и радиус 14px для всех новых карточек, строк и кнопок; hover — смена рамки на rgba(109, 134, 255, 0.5) плюс микросдвиг.",
+      "Do появление новых блоков через Reveal (подъём 28px + blur 6px → 0.7s, ease [0.16, 1, 0.3, 1]) и соблюдать prefers-reduced-motion: статичный кадр поля, отключённые анимации каретки/подсказки/переходов.",
+      "Do тёмные браузерные поверхности в тон миру: скроллбар (трек Deep Terminal, ползунок #1c2740, hover #2a3a5e), selection — rgba(77, 107, 254, 0.35) с белым текстом, focus-visible — outline 2px #6d86ff, offset 3px.",
+      "Do использовать для кейсов и команды только реальные ассеты владельцев (src/assets/images/cases, src/assets/images/team) и сохранять provenance: иллюстрации кейсов нарисованы командой, фото — реальные фотографии членов команды; каждый новый растр — с зафиксированным источником.",
+      "Do проверять контраст: Dim Frost на Terminal Ink держится для вторичного текста, основной текст — только Frost Text; акцентный текст Bright Electric Blue — только крупным шрифтом или в элементах с запасом по контрасту."
+    ],
+    "donts": [
+      "Don't вводить светлую тему, светлые секции или «карточную витрину»: мир строго тёмный, светлое разрешено только тексту и каретке.",
+      "Don't добавлять второй акцентный цвет, градиентные заливки кнопок, тёплые оттенки и цветные иконки вне акцентной пары.",
+      "Don't оставлять тени на карточках в покое и добавлять новые тени — Accent Lift существует только у hover основной кнопки.",
+      "Don't подключать шрифты с CDN или добавлять начертания/шрифты вне заявленных (Manrope 400–800, JetBrains Mono 400/500, самохостинг woff2).",
+      "Don't заменять реальные кейсы/фото стоковыми изображениями или сгенерированными людьми/продуктами; provenance растров нельзя обесценивать.",
+      "Don't изобретать новые анимации появления в обход Reveal и плодить постоянные (не откликающиеся) анимации: движение — либо механика терминала, либо отклик на hover.",
+      "Don't пренебрегать prefers-reduced-motion: typewriter, поле, Reveal и hover-переходы обязаны иметь статичное поведение."
+    ]
+  }
+}
